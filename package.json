@@ -1,0 +1,16 @@
+{
+  "name": "travel-site",
+  "version": "1.0.0",
+  "description": "travel website",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --baseDir=\"public\""
+  },
+  "author": "emily ibrahim",
+  "private": true,
+  "license": "private",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "keywords": []
+}

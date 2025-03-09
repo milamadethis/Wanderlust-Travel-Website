@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderlust Travel</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+
+    <!-- library css files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Wanderlust</h1>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore breathtaking destinations around the world</p>
+            <a href="#destinations" class="btn-primary">View Destinations</a>
+        </div>
+    </section>
+
+    <!-- Destinations Section with Glide.js -->
+    <section id="destinations" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Popular Destinations</h2>
+                <p>Explore our most sought-after vacation spots</p>
+            </div>
+            
+            <div class="glide" data-aos="fade-up" data-aos-delay="200">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="destination-card">
+                                <img src="assets/images/destinations/bali.jpg" alt="Bali">
+                                <div class="destination-info">
+                                    <h3>Bali, Indonesia</h3>
+                                    <p>The Island of Gods</p>
+                                    <div class="destination-features">
+                                        <span><i class="fas fa-star"></i> 4.8</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> South Asia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="destination-card">
+                                <img src="assets/images/destinations/paris.jpg" alt="Paris">
+                                <div class="destination-info">
+                                    <h3>Paris, France</h3>
+                                    <p>City of Love</p>
+                                    <div class="destination-features">
+                                        <span><i class="fas fa-star"></i> 4.7</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="destination-card">
+                                <img src="assets/images/destinations/Santorini.webp" alt="Santorini">
+                                <div class="destination-info">
+                                    <h3>Santorini, Greece</h3>
+                                    <p>The Stunning Island</p>
+                                    <div class="destination-features">
+                                        <span><i class="fas fa-star"></i> 4.9</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="destination-card">
+                                <img src="assets/images/destinations/kyoto.jpg" alt="Kyoto">
+                                <div class="destination-info">
+                                    <h3>Kyoto, Japan</h3>
+                                    <p>City of Temples</p>
+                                    <div class="destination-features">
+                                        <span><i class="fas fa-star"></i> 4.6</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> East Asia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="destination-card">
+                                <img src="assets/images/destinations/timesscare.jpg" alt="New York">
+                                <div class="destination-info">
+                                    <h3>New York, USA</h3>
+                                    <p>The Big Apple</p>
+                                    <div class="destination-features">
+                                        <span><i class="fas fa-star"></i> 4.5</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> North America</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section with AOS -->
+    <section id="featured" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Experiences</h2>
+                <p>Curated experiences for every type of traveler</p>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="featured-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/featured/beach.jpg" alt="Beach Vacation">
+                    <div class="featured-content">
+                        <h3>Beach Getaways</h3>
+                        <p>Relax on pristine shores and enjoy the crystal clear waters</p>
+                    </div>
+                </div>
+                
+                <div class="featured-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/featured/skii.jpg" alt="Mountain Adventure">
+                    <div class="featured-content">
+                        <h3>Mountain Adventures</h3>
+                        <p>Explore breathtaking peaks and challenging trails</p>
+                    </div>
+                </div>
+                
+                <div class="featured-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/featured/cittyy.jpeg" alt="City Exploration">
+                    <div class="featured-content">
+                        <h3>City Explorations</h3>
+                        <p>Dive into the culture and history of world-class cities</p>
+                    </div>
+                </div>
+                
+                <div class="featured-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/featured/culinary.jpeg" alt="Culinary Tours">
+                    <div class="featured-content">
+                        <h3>Culinary Tours</h3>
+                        <p>Taste the authentic flavors of global cuisine and get wine along the way</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section with Leaflet -->
+    <section id="map-section" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Explore Our Destinations</h2>
+                <p>Find your next adventure on our interactive map</p>
+            </div>
+            
+            <div id="map" data-aos="zoom-in"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Lightbox -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Travel Gallery</h2>
+                <p>Glimpses of unforgettable experiences around the world</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <a href="assets/images/gallery/cave.jpeg" data-lightbox="travel-gallery" data-title="Amazing landscapes" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/gallery/cave.jpeg" alt="Travel">
+                </a>
+                <a href="assets/images/gallery/waterr.jpeg" data-lightbox="travel-gallery" data-title="Beautiful beaches" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/gallery/waterr.jpeg" alt="Beach">
+                </a>
+                <a href="assets/images/gallery/mountain.jpeg" data-lightbox="travel-gallery" data-title="Majestic mountains" class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/gallery/mountain.jpeg" alt="Mountains">
+                </a>
+                <a href="assets/images/gallery/city.jpeg" data-lightbox="travel-gallery" data-title="Urban explorations" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/gallery/city.jpeg" alt="City">
+                </a>
+                <a href="assets/images/gallery/market.jpeg" data-lightbox="travel-gallery" data-title="Culinary delights" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/gallery/market.jpeg" alt="Food">
+                </a>
+                <a href="assets/images/gallery/greece.jpeg" data-lightbox="travel-gallery" data-title="Luxury accommodations" class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/gallery/greece.jpeg" alt="Hotel">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help plan your dream vacation</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Travel Street, Adventure City</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@wanderlusttravel.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Open Hours</h3>
+                            <p>Monday - Friday: 9AM - 5PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wanderlust</h2>
+                    <p>Discover the world with us</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for travel updates and exclusive offers</p>
+                    <form>
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wanderlust Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- library js files -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
